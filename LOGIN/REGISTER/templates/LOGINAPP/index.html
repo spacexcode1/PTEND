@@ -1,0 +1,15 @@
+{% extends "LOGINAPP/base.html" %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">WELCOME TO ONLINE PTEND</h1>
+    {% if user.is_authenticated %}
+        <h2>Hello!! {{ user.username }}!</h2>
+    {% else %}
+        <h2 class="lead">Hello User! Please Login Or Register with us!</h2>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
